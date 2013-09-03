@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {
+    "jquery2": "latest",
+    "underscore": "latest",
+    "backbone": "latest"
+  }
+}

@@ -1,0 +1,66 @@
+
+// OJ Example: Server-side Commandline Tool
+
+
+// The OJ commandline tool embraces the Node approach
+// to file including using `require` and `module.exports`
+
+
+
+// Export a function that uses OJ code:
+
+_ = require('underscore');
+Backbone = require('backbone');
+
+module.exports = function(){
+  html(function(){
+    head(function(){
+      title('OJ Example: Server-side Commandline Tool');
+    })
+
+    body(function(){
+      h1('OJ Example: Server-side Commandline Tool');
+
+      p('This is a paragraph');
+
+      Button('This is a button', {
+        click:function(){
+          alert('That works!');
+        }
+      });
+
+      p('These controls are bound to a user\'s name');
+
+
+      // Create a UserModel
+      var UserModel = Backbone.Model.extend({});
+
+      // Create a user from the model
+      var user = new UserModel({name:'Evan', strength:9001});
+
+      // Bind controls to the user's name
+      TextBox({model:user, key:'name'});
+      TextArea({model:user, key:'name'});
+      ListBox({model:user, key:'name',
+               options:['', 'Brian','Evan','Sam']});
+      CheckBox({model:user, key:'name'});
+      Text({model:user, key:'name',tagName:'div'});
+
+      // Create a button that sets the model directly
+      Button('Set Model to Brian', {click:function(){
+          user.set('name', 'Brian');
+      }});
+
+      // Add CSS to space the controls evenly
+      css({
+          '.oj-TextBox,.oj-TextArea,.oj-ListBox,.oj-Button,div':{
+              width:'200px',
+              margin:'20px 0',
+              display:'block'
+          }
+      });
+
+    });
+  })
+
+};
