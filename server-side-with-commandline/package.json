@@ -3,6 +3,7 @@
   "dependencies": {
     "jquery2": "latest",
     "underscore": "latest",
-    "backbone": "latest"
+    "backbone": "latest",
+    "oj-twitter-button": "latest"
   }
 }
