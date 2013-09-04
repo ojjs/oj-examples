@@ -37,8 +37,8 @@ module.exports = function(){
 
       h1('Server-side Commandline Tool');
 
-      // Use partial to render links to twitter
-      p('Use a partial function to render twitter links:');
+      // Use the partial function included through `require`
+      p('Render twitter links with a partial function:');
       _twitterLink(user1);br();
       _twitterLink(user2);br();
       _twitterLink(user3);br();
