@@ -1,4 +1,4 @@
-# Server-side with Commandline
+# Server-side with Commandline (in CoffeeScript)
 
 OJ has a [commandline tool](http://ojjs.org/docs.html#commandline) that can build OJ server-side. This will get you started:
 
